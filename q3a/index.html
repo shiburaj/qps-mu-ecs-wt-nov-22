@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Verify</title>
+</head>
+<body>
+    <form id="checkForm" action="">
+        <input type="text" name="userValue" />
+        <button type="submit">Check</button>
+    </form>
+
+    <script>
+        let checkForm = document.getElementById('checkForm');
+        checkForm.addEventListener('submit', e => {
+            e.preventDefault();
+            let userValue = checkForm.userValue.value;
+
+            userValue = Number(userValue);
+            if(!isNaN(userValue)){
+                alert('you have entered a valid number.');
+            }else{
+                alert('you have entered a invalid number.');
+
+            }
+        })
+    </script>
+</body>
+</html>
